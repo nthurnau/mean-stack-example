@@ -7,13 +7,18 @@
 	function userService($http){
 		var apiUrl = '/api/users/'
 		var service = {
-			index: index
+			index: index,
+			show: show
 		}
 		return service
 
 		// factory functions:
 		function index(){
 			return $http.get(apiUrl)
+		}
+
+		function show(id){
+			return $http.get(apiUrl + id)
 		}
 	}
 })()

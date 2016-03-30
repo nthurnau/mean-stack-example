@@ -21,7 +21,7 @@ module.exports = {
 
 	// show specific user
 	show: function(req,res){
-		User.findOne({_id: req.params.id}, function(err, user){
+		User.findOne({_id: req.params.id}, 'email name', function(err, user){
 			if(err) return console.log(err)
 			res.json(user)
 		})

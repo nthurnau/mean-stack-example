@@ -9,8 +9,17 @@
 			$stateProvider
 				.state('home', {
 					url: '/',
-					templateUrl: 'partials/home.html',
+					templateUrl: 'partials/home.html'
+				})
+				.state('users', {
+					url: '/users',
+					templateUrl: 'partials/users.html',
 					controller: 'MainController as main'
+				})
+				.state('detail', {
+					url: '/users/:id',
+					templateUrl: 'partials/detail.html',
+					controller: 'DetailController as detail'
 				})
 		})
 })()

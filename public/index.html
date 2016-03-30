@@ -16,6 +16,16 @@
 
 </head>
 <body ng-app="meanStack">
+	<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">WDI CRUD SPA MEAN BOOM</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="users">Users</a></li>
+        <li><a ui-sref="newUser">Create User</a></li>
+      </ul>
+    </div>
+  </nav>
 	<div class="container">
 		<div ui-view></div>
 	</div>

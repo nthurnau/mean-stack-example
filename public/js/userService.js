@@ -8,7 +8,10 @@
 		var apiUrl = '/api/users/'
 		var service = {
 			index: index,
-			show: show
+			show: show,
+			create: create,
+			update: update,
+			destroy: destroy
 		}
 		return service
 
@@ -19,6 +22,18 @@
 
 		function show(id){
 			return $http.get(apiUrl + id)
+		}
+
+		function create(data){
+			return $http.post(apiUrl, data)
+		}
+
+		function update(id, data){
+			return $http.patch(apiUrl + id, data)
+		}
+
+		function destroy(id){
+			return $http.delete(apiUrl + id)
 		}
 	}
 })()
